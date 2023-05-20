@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>weatherReport</title>
+	<!-- IonIcons -->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+	<!-- my -->
+	<link rel="stylesheet" href="./assets/style/style.css">
+	<script src="./assets/scripts/app.js" defer></script>
+
+		
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<header>
+		<div class="container">
+			<a href="#" class="logo">
+				<ion-icon name="cloud-circle-outline" class="i-icon"></ion-icon>
+				<span>weatherReport</span>
+			</a>
+			<div class="search-container">
+				<div class="search-input">
+					<button class="search_arrow">
+						<ion-icon class="i-icon" name="arrow-back-outline"></ion-icon>
+					</button>
+					<div class="search-input-cont" js-search-input-container>
+						<span class="m-icon">search</span>
+						<input type="search" placeholder="Введите город">
+						<div class="loader"></div>
+					</div>
+				</div>
+				<div class="search-result">
+					<ul class="result-list" js-search-container>
+						<!-- <li class="result-list-item">
+							<span class="m-icon">location_on</span>
+							<div class="list-item-info">
+								<p class="item-title">Краснодар</p>
+								<p class="item-subtitle">Краснодар, Россия</p>
+							</div>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="header-actions">
+				<button class="btn-openSearch">
+					<span class="m-icon">search</span>
+				</button>
+				
+				<a class="btn-currLocate" href="#/current-location">
+					<span class="m-icon">my_location</span>
+					<span class="btn-currLocate-text">Ваше местоположение</span>
+				</a>
+			</div>
+		</div>
+	</header>
+		<article class="main-container">
+			<div class="content-left">
+				<section js-currentWeather-box>
+					<!-- <div class="current-weather weather-box card-item">
+						<span class="weather-box-title">Сейчас</span>
+						<div class="details-one">
+							<h1 class="degrees">21&deg;c</h1>
+							<img src="https://openweathermap.org/img/wn/01n@4x.png" alt="">
+						</div>
+						<div class="details-two">
+							<img src="https://openweathermap.org/img/wn/10d@4x.png" alt="">
+							<span class="weather-description">Снег</span>
+						</div>
+						<div class="details-three">
+							<div>
+								<span class="m-icon">location_on</span>
+								<p class="current-city">Краснодар, Россия</p>
+							</div>
+							<div>
+								<span class="m-icon">calendar_month</span>
+								<p class="current-date">Суббота 5 дек 2023</p>
+							</div>
+						</div>
+					</div> -->
+				</section>
+				<section>
+					<div class="forecast-today card-item">
+						<span class="weather-box-title">Сегодня в</span>
+						<div class="forecast-today__box weather-box">
+							<div class="forecast-today__container" js-horlyForecast-box>
+								<!-- <div class="forecast-today__item">
+									<img src="https://openweathermap.org/img/wn/01n@2x.png" alt="">
+									<span class="forecast-today__time">01:00</span>
+									<span class="forecast-today__degress">10&deg;c</span>
+								</div>
+								<div class="forecast-today__item">
+									<img src="https://openweathermap.org/img/wn/01n@2x.png" alt="">
+									<span class="forecast-today__time">01:00</span>
+									<span class="forecast-today__degress">10&deg;c</span>
+								</div>
+								<div class="forecast-today__item">
+									<img src="https://openweathermap.org/img/wn/01n@2x.png" alt="">
+									<span class="forecast-today__time">01:00</span>
+									<span class="forecast-today__degress">10&deg;c</span>
+								</div>
+								<div class="forecast-today__item">
+									<img src="https://openweathermap.org/img/wn/01n@2x.png" alt="">
+									<span class="forecast-today__time">01:00</span>
+									<span class="forecast-today__degress">10&deg;c</span>
+								</div>
+								<div class="forecast-today__item">
+									<img src="https://openweathermap.org/img/wn/01n@2x.png" alt="">
+									<span class="forecast-today__time">01:00</span>
+									<span class="forecast-today__degress">10&deg;c</span>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="content-right">
+				<section js-weatherInfo-box>
+					<!-- <span class="weather-box-title">Полезная информация</span>
+					<div class="today-weather__one-container">
+						<div class="today-weather__wind today-weather__box weather__bg-block">
+							<span class="today-weather__box-title">Ветер</span>
+							<div class="wind_container">
+								<span class="m-icon wind-icon">air</span>
+								<div class="wind_details">
+									<div class="wind-status">
+										<h3>Скорость</h3>
+										<p class="wind-status__speed-value">12км/ч</p>
+									</div>
+									<div class="wind-status">
+										<h3>Направление</h3>
+										<div>
+											<span class="m-icon">navigation</span>
+											<p class="wind-status__direction-value">3</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="today-weather__uv today-weather__box weather__bg-block">
+							<span class="today-weather__box-title">Индекс UV</span>
+							<div class="today-weather__uv-container">
+								<h1>UV</h1>
+								<p class="uv-value">12</p>
+								<p class="uv-quality">Низкий</p>
+							</div>
+						</div>
+						<div class="today-weather__sunrise today-weather__box weather__bg-block">
+							<span class="today-weather__box-title">Восход и закат солнца</span>
+							<div class="today-weather__sunrise-container">
+								<div class="sunrise sunriset">
+									<span class="m-icon" style="color: orange;">light_mode</span>
+									<div class="details">
+										<h3>Восход</h3>
+										<p>05:46</p>
+									</div>
+								</div>
+								<div class="sunset sunriset">
+									<span class="m-icon" style="color: grey;">dark_mode</span>
+									<div class="details">
+										<h3>Закат</h3>
+										<p>19:46</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="today-weather__two-container">
+						<div class="today-weather__miniblock weather__bg-block">
+							<span class="today-weather__box-title">Влажность</span>
+							<div class="miniblock-container">
+								<span class="m-icon humidity-title">humidity_percentage</span>
+								<p class="miniblock-value">25%</p>
+							</div>
+						</div>
+						<div class="today-weather__miniblock weather__bg-block">
+							<span class="today-weather__box-title">Ощущение</span>
+							<div class="miniblock-container">
+								<span class="m-icon temperature-title">thermostat</span>
+								<p class="miniblock-value">20&deg;c</p>
+							</div>
+						</div>
+						<div class="today-weather__miniblock weather__bg-block">
+							<span class="today-weather__box-title">Давление</span>
+							<div class="miniblock-container">
+								<span class="m-icon pressure-title">waves</span>
+								<p class="miniblock-value">1230hPa</p>
+							</div>
+						</div>
+						<div class="today-weather__miniblock weather__bg-block">
+							<span class="today-weather__box-title">Видимость</span>
+							<div class="miniblock-container">
+								<span class="m-icon visibility-title">visibility</span>
+								<p class="miniblock-value">20км</p>
+							</div>
+						</div>
+					</div> -->
+				</section>
+				<section>
+					<div class="five-days-forecast card-item">
+						<span class="weather-box-title">Прогноз на 5 дней</span>
+						<div class="five-days-forecast-container weather-box" js-daysForecast-box>
+							<!-- <div class="days-forecast-item">
+								<h1 class="time">04.12</h1>
+								<p class="weekday">Суббота</p>
+								<div class="days-forecast-item-details">
+									<h1>15&deg;c</h1>
+									<img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+								</div>
+								<p>Облачно</p>
+							</div>
+							<div class="days-forecast-item">
+								<h1 class="time">04.12</h1>
+								<p class="weekday">Суббота</p>
+								<div class="days-forecast-item-details">
+									<h1>15&deg;c</h1>
+									<img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+								</div>
+								<p>Облачно</p>
+							</div>
+							<div class="days-forecast-item">
+								<h1 class="time">04.12</h1>
+								<p class="weekday">Суббота</p>
+								<div class="days-forecast-item-details">
+									<h1>15&deg;c</h1>
+									<img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+								</div>
+								<p>Облачно</p>
+							</div>
+							<div class="days-forecast-item">
+								<h1 class="time">04.12</h1>
+								<p class="weekday">Суббота</p>
+								<div class="days-forecast-item-details">
+									<h1>15&deg;c</h1>
+									<img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+								</div>
+								<p>Облачно</p>
+							</div>
+							<div class="days-forecast-item">
+								<h1 class="time">04.12</h1>
+								<p class="weekday">Суббота</p>
+								<div class="days-forecast-item-details">
+									<h1>15&deg;c</h1>
+									<img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+								</div>
+								<p>Облачно</p>
+							</div> -->
+						</div>
+					</div>
+				</section>
+				<footer class="footer">
+					<p>© 2023 - 2023 weatherReport - DaRkLoTii. <br>Last Updated : 04/16/2023 05:20:32</p>
+					<div>
+						<p class="footer-container">Сделано на базе <a href="https://openweathermap.org/" target="_blank"><img src="./assets/img/openweatherlogo.png" alt=""></a> </p>
+					</div>
+				</footer>
+			</div>
+		</article>
+
+</body>
+</html>
