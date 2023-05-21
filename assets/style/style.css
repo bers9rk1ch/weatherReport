@@ -194,8 +194,6 @@ a {
 	align-items: flex-start;
 	width: 120vw;
 	height: 150vh;
-	width:100svw;
-	height:100svh;
 	box-shadow: 0 0 9999px 9999px black;
 	background-color: var(--bg-search-active-color);
 	z-index: 2;
