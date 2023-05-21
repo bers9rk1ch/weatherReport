@@ -1,16 +1,5 @@
 
 /* INIT */
-
-/*
-	#0D0320
-	#160734
-	#110528
-	#280b56
-	#090217
-	#714abf
-	#0D061A
-	#270F57
-*/
 :root {
 
 	--indexSize: 1vw + 1vh;
@@ -412,12 +401,6 @@ a {
 
 .forecast-today { display: grid; }
 
-/* 
-.forecast-today-title {
-	padding: 20px;
-	font-size: 30px;
-} */
-
 .forecast-today__box {
 	background-color: var(--bg-block-color);
 	border-radius: var(--border-block-radios);
@@ -544,32 +527,6 @@ a {
 	font-weight: 700;
 	white-space: nowrap;
 }
-
-/* .today-weather__uv-container {
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	grid-template-areas:
-	'a a'
-	'a a'
-	;
-	gap: 0 60px;
-}
-
-.today-weather__uv-container h1 {
-	justify-self: center;
-	grid-column: span 2;
-	font-size: 100px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.today-weather__uv-container .uv-value {
-	font-size: 60px;
-}
-.today-weather__uv-container .uv-quality {
-	font-size: 25px;
-} */
 
 .today-weather__sunrise-container {
 	display: flex;
