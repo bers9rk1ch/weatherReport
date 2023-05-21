@@ -73,6 +73,10 @@
 	background-color: var(--bg-scrollbar-thumb-color);
 }
 
+::-webkit-scrollbar-corner {
+	background-color: var(--bg-scrollbar-thumb-color);
+}
+
 html, body {
 	background-color: var(--bg-color);
 	color: white;
