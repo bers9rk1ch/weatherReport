@@ -66,7 +66,6 @@ window.addEventListener('hashchange', async e => {
 	// params lat=55.55555 and lon=55.55555
 	// получаем lat и lon из hash
 	const params = currentUrl.split('?')[1].split('&');
-	console.log(params[0].split('=')[1], params[1].split('=')[1]);
 	// params lat > 55.55555 and lon > 55.55555
 	updateWeather(params[0].split('=')[1], params[1].split('=')[1]);
 	
@@ -227,7 +226,7 @@ const updateWeather = (lat, lon) => {
 	fetchData(urls.currentWeather(lat, lon), (data) => {
 		const date = getDateCustom(data.dt, data.timezone);
 		let SunTime = data.weather[0].icon.split('');
-		console.log(data);
+
 		const currentWeatherBox = document.createElement('div');
 		currentWeatherBox.classList = 'current-weather weather-box card-item';
 		currentWeatherBox.innerHTML = `
