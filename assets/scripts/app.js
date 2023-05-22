@@ -269,7 +269,7 @@ const updateWeather = (lat, lon) => {
 						<div class="wind_details">
 							<div class="wind-status">
 								<h3>Скорость</h3>
-								<p class="wind-status__speed-value">${Math.floor(data.wind.speed)}км/ч</p>
+								<p class="wind-status__speed-value">${Math.floor(data.wind.speed)}м/с</p>
 							</div>
 							<div class="wind-status">
 								<h3>Направление</h3>
