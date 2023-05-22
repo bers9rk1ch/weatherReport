@@ -310,6 +310,7 @@ a {
 .result-list {
 	height: inherit;
 	overflow-y: auto;
+	z-index: 999;
 }
 
 .result-list-item {
