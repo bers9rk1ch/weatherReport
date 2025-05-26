@@ -1,2 +1,2 @@
 # weatherReport
-# https://darklotii.github.io/weatherReport/
+# https://bers9rk1ch.github.io/weatherReport/
